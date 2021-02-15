@@ -581,6 +581,32 @@ video {
 
 /* Write your custom CSS below */
 
+@font-face {
+  font-family: 'Helvetica Neue';
+
+  src: url('../fonts/HelveticaNeue-Bold.woff2') format('woff2'),
+        url('../fonts/HelveticaNeue-Bold.woff') format('woff');
+
+  font-weight: bold;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+
+  src: url('../fonts/HelveticaNeue.woff2') format('woff2'),
+        url('../fonts/HelveticaNeue.woff') format('woff');
+
+  font-weight: normal;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
 .dropdown-menu:hover > div {
   display: block;
 }
@@ -588,30 +614,31 @@ video {
 /* HAMBURGER MENU */
 
 .icon-hamburger{
+  cursor: pointer;
+  margin: auto;
+  position: relative;
   width: 28px;
   height: 22px;
-  position:relative;
-  margin:auto;
   transform:rotate(0);
   transition:.5s ease-in-out;
-  cursor:pointer;
 }
 
 .icon-hamburger span{
-  display:block;
-  position:absolute;
+  --tw-bg-opacity: 1;
+  background-color: rgba(39, 49, 62, var(--tw-bg-opacity));
+  border-radius: 0.25rem;
+  display: block;
+  opacity: 1;
+  position: absolute;
+  left: 0px;
+  width: 100%;
   height:3px;
-  width:100%;
-  background:#000;
-  border-radius:9px;
-  opacity:1;
-  left:0;
   transform:rotate(0);
   transition:.25s ease-in-out
 }
 
 .icon-hamburger span:nth-child(1){
-  top:0
+  top: 0px;
 }
 
 .icon-hamburger span:nth-child(2), .icon-hamburger span:nth-child(3){
@@ -640,6 +667,16 @@ video {
   top:18px;
   width:0%;
   left:50%
+}
+
+/* MOBILE MENU */
+
+.main-nav.open {
+  display: block;
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  top: 100%;
 }
 
 /* Write your custom CSS above */
@@ -10814,6 +10851,14 @@ video {
 
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.font-helevetica {
+  font-family: Helvetica Neue;
+}
+
+.font-opensans {
+  font-family: Open sans;
 }
 
 .font-thin {
@@ -40584,6 +40629,14 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .sm\:font-helevetica {
+    font-family: Helvetica Neue;
+  }
+
+  .sm\:font-opensans {
+    font-family: Open sans;
+  }
+
   .sm\:font-thin {
     font-weight: 100;
   }
@@ -70272,6 +70325,14 @@ video {
 
   .md\:font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .md\:font-helevetica {
+    font-family: Helvetica Neue;
+  }
+
+  .md\:font-opensans {
+    font-family: Open sans;
   }
 
   .md\:font-thin {
@@ -99964,6 +100025,14 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .lg\:font-helevetica {
+    font-family: Helvetica Neue;
+  }
+
+  .lg\:font-opensans {
+    font-family: Open sans;
+  }
+
   .lg\:font-thin {
     font-weight: 100;
   }
@@ -129654,6 +129723,14 @@ video {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .xl\:font-helevetica {
+    font-family: Helvetica Neue;
+  }
+
+  .xl\:font-opensans {
+    font-family: Open sans;
+  }
+
   .xl\:font-thin {
     font-weight: 100;
   }
@@ -159342,6 +159419,14 @@ video {
 
   .\32xl\:font-mono {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  .\32xl\:font-helevetica {
+    font-family: Helvetica Neue;
+  }
+
+  .\32xl\:font-opensans {
+    font-family: Open sans;
   }
 
   .\32xl\:font-thin {

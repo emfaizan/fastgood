@@ -3,6 +3,24 @@
 
 /* Write your custom CSS below */
 
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../fonts/HelveticaNeue-Bold.woff2') format('woff2'),
+        url('../fonts/HelveticaNeue-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../fonts/HelveticaNeue.woff2') format('woff2'),
+        url('../fonts/HelveticaNeue.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 .dropdown-menu:hover > div {
     @apply block;
 }
@@ -10,59 +28,59 @@
 
 /* HAMBURGER MENU */
 .icon-hamburger{
+    @apply relative m-auto cursor-pointer;
     width: 28px;
     height: 22px;
-    position:relative;
-    margin:auto;
     transform:rotate(0);
     transition:.5s ease-in-out;
-    cursor:pointer;
 }
 
 .icon-hamburger span{
-display:block;
-position:absolute;
-height:3px;
-width:100%;
-background:#000;
-border-radius:9px;
-opacity:1;
-left:0;
-transform:rotate(0);
-transition:.25s ease-in-out
+    @apply block absolute bg-black rounded left-0 opacity-100 w-full;
+    height:3px;
+    transform:rotate(0);
+    transition:.25s ease-in-out
 }
 
 .icon-hamburger span:nth-child(1){
-top:0
+    @apply top-0;
 }
 
 .icon-hamburger span:nth-child(2), .icon-hamburger span:nth-child(3){
-top: 9px;
+    top: 9px;
 }
 
 .icon-hamburger span:nth-child(4){
-top: 18px;
+    top: 18px;
 }
 
 .icon-hamburger.open span:nth-child(1){
-top:18px;
-width:0%;
-left:50%
+    top:18px;
+    width:0%;
+    left:50%
 }
 
 .icon-hamburger.open span:nth-child(2){
-transform:rotate(45deg)
+    transform:rotate(45deg)
 }
 
 .icon-hamburger.open span:nth-child(3){
-transform:rotate(-45deg)
+    transform:rotate(-45deg)
 }
 
 .icon-hamburger.open span:nth-child(4){
-top:18px;
-width:0%;
-left:50%
+    top:18px;
+    width:0%;
+    left:50%
 }
+
+
+
+/* MOBILE MENU */
+.main-nav.open {
+    @apply absolute block top-full left-0 right-0;
+}
+
 
 /* Write your custom CSS above */
 

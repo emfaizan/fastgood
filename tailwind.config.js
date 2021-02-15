@@ -32,6 +32,10 @@ module.exports = {
           DEFAULT: '1.5rem',
           lg: '2rem'
         },
+      },
+      fontFamily: {
+        'helevetica': ['Helvetica Neue'],
+        'opensans': ['Open sans'],
       }
     },
   },
